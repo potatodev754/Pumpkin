@@ -42,24 +42,9 @@ pub mod forms;
 pub mod permissions;
 pub mod scheduler;
 
-pub mod command {
-    pub use crate::wit::pumpkin::plugin::command::{
-        Command, CommandError, CommandNode, CommandSender, ConsumedArgs,
-    };
-}
-
-pub use wit::pumpkin::plugin::{
-    bedrock_packets, block_entity, boss_bar, command as command_wit, common,
-    context::{Context, Server},
-    entity,
-    entity_types::EntityType,
-    gui, i18n, java_dialogs, java_packets, particles, permission, player, scoreboard, server, text,
-    world,
-};
-
-pub mod java_dialog {
-    pub use crate::wit::pumpkin::plugin::java_dialogs::{ActionButton, DialogBody, DialogType};
-}
+pub use wit::pumpkin::plugin::*;
+use crate::context::Context;
+use crate::server::Server;
 
 pub mod logging;
 
