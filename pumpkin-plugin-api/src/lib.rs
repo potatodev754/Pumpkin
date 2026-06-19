@@ -64,7 +64,7 @@ pub mod java_dialog {
 pub mod logging;
 
 #[allow(clippy::too_many_arguments)]
-mod wit {
+pub mod wit {
     wit_bindgen::generate!({
         skip: ["init-plugin"],
         path: "../pumpkin-plugin-wit/v0.1",
